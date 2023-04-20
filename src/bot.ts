@@ -271,6 +271,7 @@ export class ChatGPTBot {
     if (rawText.startsWith("/img")){
       console.log(`🤖 Image: ${rawText}`)
       const imgContent = rawText.slice(4)
+      //这个
       if (privateChat) {
         let url = await dalle(talker.name(), imgContent) as string;
         const fileBox = FileBox.fromUrl(url)
